@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - OfflineBill 离线记账本</title>
+    <style>
+        body { font-family: "HarmonyOS Sans", "Microsoft YaHei", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
+        h1 { color: #007DFF; text-align: center; }
+        h2 { color: #007DFF; border-bottom: 2px solid #007DFF; padding-bottom: 5px; }
+        .update-date { text-align: right; color: #666; }
+        .highlight { background: #fff3cd; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+<h1>OfflineBill 离线记账本 隐私政策</h1>
+<p class="update-date">更新日期：2026年6月20日</p>
+<p class="update-date">生效日期：2026年6月20日</p>
+
+<p>OfflineBill 离线记账本（以下简称"本应用"）非常重视用户隐私保护。本隐私政策旨在向您说明本应用如何处理您的个人信息。请您在使用本应用前，仔细阅读并充分理解本隐私政策的全部内容。</p>
+
+<h2>一、应用性质声明</h2>
+<p><strong>本应用是一款完全离线的记账应用，不依赖任何网络服务。</strong>本应用：</p>
+<ul>
+    <li>不包含任何网络请求功能，不与任何服务器进行数据交互</li>
+    <li>不收集、不上传、不分享任何用户数据</li>
+    <li>所有用户数据均存储在您的设备本地（应用沙箱内）</li>
+    <li>卸载本应用后，所有数据将被自动清除</li>
+</ul>
+
+<h2>二、信息收集与使用</h2>
+<p>本应用在运行过程中处理的用户信息如下：</p>
+<table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+    <tr style="background: #f0f0f0;">
+        <th>信息类型</th>
+        <th>用途</th>
+        <th>存储位置</th>
+        <th>是否上传</th>
+    </tr>
+    <tr>
+        <td>用户名、密码</td>
+        <td>用于本地账号登录验证</td>
+        <td>设备本地数据库</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>账本、记账记录</td>
+        <td>用于记账功能的数据存储与展示</td>
+        <td>设备本地数据库</td>
+        <td>否</td>
+    </tr>
+    <tr>
+        <td>分类信息</td>
+        <td>用于收支分类管理</td>
+        <td>设备本地数据库</td>
+        <td>否</td>
+    </tr>
+</table>
+
+<h2>三、密码安全保护</h2>
+<p>本应用对您的密码采用 industry-standard 加密算法进行保护：</p>
+<ul>
+    <li><strong>哈希算法</strong>：PBKDF2-HMAC-SHA256</li>
+    <li><strong>迭代次数</strong>：10000次</li>
+    <li><strong>盐值</strong>：每个用户使用独立的16字节随机盐</li>
+    <li><strong>明文密码</strong>：绝不以明文形式存储，数据库中仅保存哈希值</li>
+</ul>
+<p>即使数据库被非法获取，也无法还原出您的原始密码。</p>
+
+<h2>四、权限使用说明</h2>
+<p>本应用遵循最小权限原则，<strong>未申请任何运行时权限</strong>。</p>
+<p>数据导入导出功能通过系统文件选择器（DocumentViewPicker）实现，基于系统临时授权访问用户选择的文件，无需申请文件存储权限。</p>
+
+<h2>五、数据导出与导入</h2>
+<p>本应用提供数据导入导出功能，用于数据备份与迁移：</p>
+<ul>
+    <li><strong>导出</strong>：用户主动操作，将数据导出为JSON文件，保存位置由用户选择</li>
+    <li><strong>导入</strong>：用户主动操作，从用户选择的JSON文件中导入数据</li>
+    <li>导入导出过程完全在本地进行，不涉及任何网络传输</li>
+    <li>导出的文件由用户自行保管，本应用不对其负责</li>
+</ul>
+
+<h2>六、第三方SDK使用</h2>
+<p>本应用仅使用鸿蒙系统内置的以下系统能力，未集成任何第三方SDK：</p>
+<ul>
+    <li>relationalStore（关系型数据库）- 用于本地数据存储</li>
+    <li>cryptoFramework（加密框架）- 用于密码哈希计算</li>
+    <li>picker（系统选择器）- 用于文件选择</li>
+    <li>hilog（日志框架）- 用于开发调试日志</li>
+</ul>
+<p>以上均为鸿蒙系统官方提供的能力，不涉及第三方数据收集。</p>
+
+<h2>七、数据安全与存储</h2>
+<ul>
+    <li>所有数据存储在应用沙箱目录内，其他应用无法访问</li>
+    <li>数据库操作使用参数化查询，防止SQL注入攻击</li>
+    <li>所有数据库游标（ResultSet）和文件句柄使用 try/finally 确保释放，防止资源泄漏</li>
+    <li>数据导入操作使用事务保证原子性，失败时自动回滚</li>
+</ul>
+
+<h2>八、未成年人保护</h2>
+<p>本应用不针对未成年人，也不会收集未成年人的个人信息。如果您是未成年人，请在监护人指导下使用本应用。</p>
+
+<h2>九、数据删除</h2>
+<ul>
+    <li><strong>删除单条记录</strong>：在记录列表中长按或滑动删除</li>
+    <li><strong>删除账本</strong>：在首页长按账本选择删除（同时删除账本内所有记录）</li>
+    <li><strong>清除全部数据</strong>：卸载本应用即可清除所有本地数据</li>
+</ul>
+
+<h2>十、隐私政策更新</h2>
+<p>本应用为离线应用，隐私政策更新将随应用版本一同发布。您可以在每次更新应用后查看最新版本的隐私政策。</p>
+
+<h2>十一、联系我们</h2>
+<p>如果您对本隐私政策有任何疑问，可通过以下方式联系我们：</p>
+<ul>
+    <li>邮箱：[请填写您的联系邮箱]</li>
+</ul>
+
+</body>
+</html>
